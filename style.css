@@ -40,8 +40,7 @@ body{
     position:static;
     width:40px;
     height:20px;
-    -webkit-appearance: button;
-    -moz-appearance: button;    
+    appearance: button;
 }
 #tweet input:checked{
     position:absolute;
@@ -61,8 +60,8 @@ body{
     border-radius:2px;
     background-position:1px center,top left;
     background-repeat:no-repeat,no-repeat;
-    background-image:url('https://a4.twimg.com/images/favicon.ico'), -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1)));
-    background-image:url('https://a4.twimg.com/images/favicon.ico'), -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%);
+    background-image:url('https://a4.twimg.com/images/favicon.ico'), linear-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1)));
+    background-image:url('https://a4.twimg.com/images/favicon.ico'), linear-gradient(top, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%);
     background-image:url('https://a4.twimg.com/images/favicon.ico'), linear-gradient(top, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); 
     text-decoration:none;
     color:#333;
@@ -72,9 +71,8 @@ body{
 }
 
 /* setting : cursor */
-*{
-    -webkit-user-select: none;
-    -moz-user-select: none;
+*{ 
+    user-select: none
 }
 
 /* setting : gameover  */
@@ -85,17 +83,17 @@ body{
     width:319px;
     height:375px;
     background:rgba(0,0,0,0.5);
-    -webkit-animation-name:gameover;
-     -webkit-animation-timing-function:linear;
-    -webkit-animation-duration:13s;
-    -webkit-animation-delay:0.5s;
+    animation-name:gameover;
+    animation-timing-function:linear;
+    animation-duration:13s;
+    animation-delay:0.5s;
     z-index:20;
     background-position:0px 0px;
     background-repeat:no-repeat;
     opacity:1;
 }
 
-@-webkit-keyframes gameover{
+@keyframes gameover{
       0% {top:-465px;opacity:1;}
       97% {top:-465px;opacity:0;}
     100% {top:0px;opacity:1;}
@@ -120,12 +118,12 @@ body{
     height: 36px;
     background-position:0px 0px;
     background-repeat:repeat-x;
-    -webkit-animation-name:progress;
-     -webkit-animation-timing-function:linear;
-    -webkit-animation-duration:12.5s;
-    -webkit-animation-delay:0.5s;
+    animation-name:progress;
+    animation-timing-function:linear;
+    animation-duration:12.5s;
+    animation-delay:0.5s;
 }
-@-webkit-keyframes progress{
+@keyframes progress{
       0% {width:0px;}
     100% {width:200px;}
 }
@@ -142,8 +140,8 @@ body{
 }
 .enemys:checked{
     overflow:hidden;
-    -webkit-animation-name:none;
-    -webkit-pointer-events: none;
+    animation-name:none;
+    pointer-events: none;
     pointer-events: none;
     opacity:0;
 }
@@ -155,11 +153,10 @@ body{
     width:49px;
     height:93px;
     display:block;
-    -webkit-appearance: button;
-    -moz-appearance: button;
+    appearance: button;
     background-position:0px 0px;
     background-repeat:no-repeat;
-    -webkit-animation-iteration-count:infinite;
+    animation-iteration-count:infinite;
     cursor:pointer;
     opacity:0.9;
     border:none;
@@ -188,8 +185,8 @@ body{
 }
 #map .mask{
     position: absolute;
-    -webkit-pointer-events: auto;
     pointer-events: auto;
+   
 }
 #map #mask_1{
     top:0; left:0;
@@ -255,9 +252,8 @@ body{
     width: 111px;
     height: 63px;
     background-color:transparent;
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    -webkit-transition:.1s all linear;
+    appearance: button;
+    transition:.1s all linear;
 }
 .score:checked{
     position:absolute;
@@ -269,8 +265,7 @@ body{
     display:block;
     width: 111px;
     height: 693px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
+    appearance: none;
     background-position:0px 0px;
     background-repeat:no-repeat;
 }
@@ -297,7 +292,6 @@ body{
     z-index:5;
     width: 106px;
     height: 98px;
-    -webkit-pointer-events: none;
     pointer-events: none;
     background-position:0px 0px;
     background-repeat:no-repeat;
@@ -316,9 +310,9 @@ body{
 #enemy_10 + .effect{top:0px; left:214px;}
 
 .enemys:checked + .effect{
-  -webkit-animation-duration:0.5s;
-  -webkit-animation-iteration-count:1;
-  -webkit-animation-direction: normal;
+  animation-duration:0.5s;
+  animation-iteration-count:1;
+  animation-direction: normal;
 }
 
 #enemy_1:checked  + .effect,
@@ -326,189 +320,189 @@ body{
 #enemy_3:checked  + .effect,
 #enemy_4:checked  + .effect,
 #enemy_5:checked  + .effect{
-  -webkit-animation-name:effect1;
+animation-name:effect1;
 }
 #enemy_6:checked  + .effect,
 #enemy_7:checked  + .effect,
 #enemy_8:checked  + .effect,
 #enemy_9:checked  + .effect,
 #enemy_10:checked + .effect{
-  -webkit-animation-name:effect2;
+animation-name:effect2;
 }
 
 
 /* setting : animation */
 
 /* effect */
-@-webkit-keyframes effect1{
-      0% { -webkit-transform: translateX(0px) translateY(0px); opacity:0;}
-     30% { -webkit-transform: translateX(-10px) translateY(-10px); opacity:1;}
-     80% { -webkit-transform: translateX(-10px) translateY(-10px); opacity:1;}
-    100% { -webkit-transform: translateX(0px) translateY(0px); opacity:0;}
+@keyframes effect1{
+      0% { transform: translateX(0px) translateY(0px); opacity:0;}
+     30% { transform: translateX(-10px) translateY(-10px); opacity:1;}
+     80% { transform: translateX(-10px) translateY(-10px); opacity:1;}
+    100% { transform: translateX(0px) translateY(0px); opacity:0;}
 }
 
-@-webkit-keyframes effect2{
-      0% { -webkit-transform: translateX(0px) translateY(0px); opacity:0;}
-     30% { -webkit-transform: translateX(10px) translateY(-10px); opacity:1;}
-     80% { -webkit-transform: translateX(10px) translateY(-10px); opacity:1;}
-    100% { -webkit-transform: translateX(0px) translateY(0px); opacity:0;}
+@keyframes effect2{
+      0% { transform: translateX(0px) translateY(0px); opacity:0;}
+     30% { transform: translateX(10px) translateY(-10px); opacity:1;}
+     80% { transform: translateX(10px) translateY(-10px); opacity:1;}
+    100% { transform: translateX(0px) translateY(0px); opacity:0;}
 }
 
 
 /* enemys */
-@-webkit-keyframes enemy_1{
-      0% {-webkit-transform:translateY(0px);}
-     40% {-webkit-transform:translateY(120px);}
-     50% {-webkit-transform:translateY(0px);}
-     90% {-webkit-transform:translateY(0px);}
-    100% {-webkit-transform:translateY(0px);}
+@keyframes enemy_1{
+      0% {transform:translateY(0px);}
+     40% {transform:translateY(120px);}
+     50% {transform:translateY(0px);}
+     90% {transform:translateY(0px);}
+    100% {transform:translateY(0px);}
 }
 #enemy_1{
-    -webkit-animation-name:enemy_1;
-    -webkit-animation-duration:5s;
-    -webkit-animation-delay:0s;
+    animation-name:enemy_1;
+    animation-duration:5s;
+    animation-delay:0s;
 }
-@-webkit-keyframes enemy_6{
-      0% {-webkit-transform:translateY(0px);}
-     40% {-webkit-transform:translateY(0px);}
-     50% {-webkit-transform:translateY(120px);}
-     90% {-webkit-transform:translateY(120px);}
-    100% {-webkit-transform:translateY(0px);}
+@keyframes enemy_6{
+      0% {transform:translateY(0px);}
+     40% {transform:translateY(0px);}
+     50% {transform:translateY(120px);}
+     90% {transform:translateY(120px);}
+    100% {transform:translateY(0px);}
 }
 #enemy_6{
-    -webkit-animation-name:enemy_6;
-    -webkit-animation-duration:5s;
-    -webkit-animation-delay:0s;
+    animation-name:enemy_6;
+    animation-duration:5s;
+    animation-delay:0s;
 }
 
 
 
-@-webkit-keyframes enemy_2{
-      0% {-webkit-transform:translateY(0px);}
-     40% {-webkit-transform:translateY(0px);}
-     50% {-webkit-transform:translateY(120px);}
-     90% {-webkit-transform:translateY(120px);}
-    100% {-webkit-transform:translateY(0px);}
+@keyframes enemy_2{
+      0% {transform:translateY(0px);}
+     40% {transform:translateY(0px);}
+     50% {transform:translateY(120px);}
+     90% {transform:translateY(120px);}
+    100% {transform:translateY(0px);}
 }
 #enemy_2{
-    -webkit-animation-name:enemy_2;
-    -webkit-animation-duration:5s;
-    -webkit-animation-delay:1s;
+    animation-name:enemy_2;
+    animation-duration:5s;
+    animation-delay:1s;
 }
-@-webkit-keyframes enemy_7{
-      0% {-webkit-transform:translateY(0px);}
-     20% {-webkit-transform:translateY(120px);}
-     30% {-webkit-transform:translateY(0px);}
-     40% {-webkit-transform:translateY(120px);}
-     45% {-webkit-transform:translateY(0px);}
-     50% {-webkit-transform:translateY(0px);}
-     90% {-webkit-transform:translateY(0px);}
-    100% {-webkit-transform:translateY(0px);}
+@keyframes enemy_7{
+      0% {transform:translateY(0px);}
+     20% {transform:translateY(120px);}
+     30% {transform:translateY(0px);}
+     40% {transform:translateY(120px);}
+     45% {transform:translateY(0px);}
+     50% {transform:translateY(0px);}
+     90% {transform:translateY(0px);}
+    100% {transform:translateY(0px);}
 }
 #enemy_7{
-    -webkit-animation-name:enemy_7;
-    -webkit-animation-duration:5s;
-    -webkit-animation-delay:1s;
+    animation-name:enemy_7;
+    animation-duration:5s;
+    animation-delay:1s;
 }
 
 
 
-@-webkit-keyframes enemy_3{
-      0% {-webkit-transform:translateY(0px);}
-     40% {-webkit-transform:translateY(0px);}
-     50% {-webkit-transform:translateY(120px);}
-     60% {-webkit-transform:translateY(120px);}
-     90% {-webkit-transform:translateY(0px);}
-    100% {-webkit-transform:translateY(0px);}
+@keyframes enemy_3{
+      0% {transform:translateY(0px);}
+     40% {transform:translateY(0px);}
+     50% {transform:translateY(120px);}
+     60% {transform:translateY(120px);}
+     90% {transform:translateY(0px);}
+    100% {transform:translateY(0px);}
 }
 #enemy_3{
-    -webkit-animation-name:enemy_3;
-    -webkit-animation-duration:10s;
-    -webkit-animation-delay:2s;
+    animation-name:enemy_3;
+    animation-duration:10s;
+    animation-delay:2s;
 }
-@-webkit-keyframes enemy_8{
-      0% {-webkit-transform:translateY(0px);}
-     10% {-webkit-transform:translateY(120px);}
-     15% {-webkit-transform:translateY(0px);}
-     20% {-webkit-transform:translateY(120px);}
-     25% {-webkit-transform:translateY(0px);}
-     30% {-webkit-transform:translateY(120px);}
-     40% {-webkit-transform:translateY(0px);}
-     50% {-webkit-transform:translateY(0px);}
-     70% {-webkit-transform:translateY(0px);}
-     90% {-webkit-transform:translateY(120px);}
-    100% {-webkit-transform:translateY(0px);}
+@keyframes enemy_8{
+      0% {transform:translateY(0px);}
+     10% {transform:translateY(120px);}
+     15% {transform:translateY(0px);}
+     20% {transform:translateY(120px);}
+     25% {transform:translateY(0px);}
+     30% {transform:translateY(120px);}
+     40% {transform:translateY(0px);}
+     50% {transform:translateY(0px);}
+     70% {transform:translateY(0px);}
+     90% {transform:translateY(120px);}
+    100% {transform:translateY(0px);}
 }
 #enemy_8{
-    -webkit-animation-name:enemy_8;
-    -webkit-animation-duration:10s;
-    -webkit-animation-delay:2s;
+    animation-name:enemy_8;
+    animation-duration:10s;
+    animation-delay:2s;
 }
 
 
 
-@-webkit-keyframes enemy_4{
-      0% {-webkit-transform:translateY(0px);}
-     30% {-webkit-transform:translateY(100px);}
-     50% {-webkit-transform:translateY(120px);}
-     60% {-webkit-transform:translateY(0px);}
-     90% {-webkit-transform:translateY(0px);}
-    100% {-webkit-transform:translateY(0px);}
+@keyframes enemy_4{
+      0% {transform:translateY(0px);}
+     30% {transform:translateY(100px);}
+     50% {transform:translateY(120px);}
+     60% {transform:translateY(0px);}
+     90% {transform:translateY(0px);}
+    100% {transform:translateY(0px);}
 }
 #enemy_4{
-    -webkit-animation-name:enemy_4;
-    -webkit-animation-duration:10s;
-    -webkit-animation-delay:1s;
+    animation-name:enemy_4;
+    animation-duration:10s;
+    animation-delay:1s;
 }
-@-webkit-keyframes enemy_9{
-      0% {-webkit-transform:translateY(0px);}
-     20% {-webkit-transform:translateY(0px);}
-     30% {-webkit-transform:translateY(0px);}
-     60% {-webkit-transform:translateY(0px);}
-     70% {-webkit-transform:translateY(120px);}
-     75% {-webkit-transform:translateY(100px);}
-     80% {-webkit-transform:translateY(120px);}
-     85% {-webkit-transform:translateY(100px);}
-     90% {-webkit-transform:translateY(120px);}
-    100% {-webkit-transform:translateY(0px);}
+@keyframes enemy_9{
+      0% {transform:translateY(0px);}
+     20% {transform:translateY(0px);}
+     30% {transform:translateY(0px);}
+     60% {transform:translateY(0px);}
+     70% {transform:translateY(120px);}
+     75% {transform:translateY(100px);}
+     80% {transform:translateY(120px);}
+     85% {transform:translateY(100px);}
+     90% {transform:translateY(120px);}
+    100% {transform:translateY(0px);}
 }
 #enemy_9{
-    -webkit-animation-name:enemy_9;
-    -webkit-animation-duration:10s;
-    -webkit-animation-delay:1s;
+    animation-name:enemy_9;
+    animation-duration:10s;
+    animation-delay:1s;
 }
 
 
 
 
-@-webkit-keyframes enemy_5{
-      0% {-webkit-transform:translateY(0px);}
-     30% {-webkit-transform:translateY(90px);}
-     60% {-webkit-transform:translateY(120px);}
-    100% {-webkit-transform:translateY(0px);}
+@keyframes enemy_5{
+      0% {transform:translateY(0px);}
+     30% {transform:translateY(90px);}
+     60% {transform:translateY(120px);}
+    100% {transform:translateY(0px);}
 }
 #enemy_5{
-    -webkit-animation-name:enemy_5;
-    -webkit-animation-duration:10s;
-    -webkit-animation-delay:2s;
+    animation-name:enemy_5;
+    animation-duration:10s;
+    animation-delay:2s;
 }
-@-webkit-keyframes enemy_10{
-      0% {-webkit-transform:translateY(0px);}
-     5% {-webkit-transform:translateY(120px);}
-     30% {-webkit-transform:translateY(0px);}
-     60% {-webkit-transform:translateY(0px);}
-     90% {-webkit-transform:translateY(0px);}
-    100% {-webkit-transform:translateY(0px);}
+@keyframes enemy_10{
+      0% {transform:translateY(0px);}
+     5% {transform:translateY(120px);}
+     30% {transform:translateY(0px);}
+     60% {transform:translateY(0px);}
+     90% {transform:translateY(0px);}
+    100% {transform:translateY(0px);}
 }
 #enemy_10{
-    -webkit-animation-name:enemy_10;
-    -webkit-animation-duration:10s;
-    -webkit-animation-delay:1s;
+    animation-name:enemy_10;
+    animation-duration:10s;
+    animation-delay:1s;
 }
 
 /* setting : images */
 #gameover{
-    /* background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAT8A\
+     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAT8A\
 AAF3CAYAAADTrUyqAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbW\
 FnZVJlYWR5ccllPAAAI11JREFUeNrsnQuMXFd5gI9f6/Vz1zZ2\
 7CTY47wfJDuQxChA2TGCkChqsqG0iFCwU1ooFOQktAikqt6tQE\
@@ -752,7 +746,7 @@ DyAwBAfgAAyA8AAPkBACA/AADkBwCA/AAAkB8AAPIDAOQHAID8\
 AACQHwAA8gMAQH4AAMgPAAD5AQAgPwAA5AcAgPwAAJAfAADyAw\
 BAfgAAyA8AAPkBACA/AADkBwCA/AAAkB8AAPIDAOQHAID8AACQ\
 HwAA8gMAQH4AAMgPAAD5AQAgPwAA5AcAMOX8vwADAGDanvIkuA\
-XmAAAAAElFTkSuQmCC"); */
+XmAAAAAElFTkSuQmCC"); 
 }
 #game{
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAT8A\
